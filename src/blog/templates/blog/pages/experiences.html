@@ -1,0 +1,150 @@
+{% extends 'blog/layout/base.html' %}
+
+{% load static %}
+
+{% block title %} Mes Expériences {% endblock %}--!>
+{% block content %}
+<div>
+	<link title="timeline-styles" rel="stylesheet" href="{%static 'timeline3/css/timeline.css'%}">
+    <script src="{%static 'timeline3/js/timeline.js'%}"></script>
+    <div id='timeline-embed' style="width: 100%; height: 600px">
+        <script type="text/javascript">
+            var timeline_json = "{%static 'experience.json'%}";
+            var additionalOptions = {
+             start_at_end: true,
+              default_bg_color: {r:0, g:0, b:0},
+              timenav_height: 150
+            }
+            timeline = new TL.Timeline('timeline-embed',
+                timeline_json,
+                additionalOptions);
+        </script>
+    </div>
+</div>
+
+{% include 'blog/layout/_nav.html' %}
+
+{% block body %}
+<article>
+    <!--<h1 class="title">#{{post.id}} - {{post.title}}</h1>--!>
+    <!--<p class="content">{{post.body}}</p>--!>
+<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="text-center">
+						Mes experiences professionnelles:<br> <br>
+					<div>
+						<p class="text-center">
+							juin 2017-mars 2018:Ingénieur d'études et développement
+							Cybersécurité/Machine Learning<br>
+						<p>
+							En prestation à nouveaux chez <a href="https://www.airbus.com">Airbus
+								Defense and Space</a> j'ai mis en pratique de façon plus profonde
+							mes connaissances en machine learning, intelligence artificielle
+							et traitement de donnée complexe pour un projet interne.<br>
+							<br>
+						<p class="text-center">
+							nov. 2016-juin 2017:Ingénieur clientèle<br>
+						<p>
+							En prestation pour <a href="http://www.sodifrance.fr">Sodifrance</a>
+							chez ADP/GSI, j'ai été en charge des relations entre les clients
+							d'une application de SIRH et les developpeurs situé en dehors du
+							territoire français.<br> <br>
+						<p class="text-center">
+						<p class="text-center">
+							oct. 2015-avr. 2016: Professeur contractuel de Maths sciences
+							physique en Lycée Professionel<br>
+						<p>
+							En remplacement en tant que professeur de Mathématiques et
+							sciences physique au<a
+								href="https://www.ac-paris.fr/serail/jcms/s6_204421/ee-lyc-vauquelin-portail">lycée
+								professionnel Louis Nicolas Vauquelin</a>. J'avais en charge avec
+							une dominance en sciences physiques des classes de tout niveaux
+							(2nd 1ère Tle bac pro et CAP). Cette expérience m'a permis de
+							comprendre un certain nombre de choses en pédagogie et en
+							dynamique de groupe. La conduite d'une classe s'apparente
+							beaucoup a une conduite de projet, le chef de projet comme le
+							chef de classe doit pouvoir faire face aux difficultés des élèves
+							dans la discipline et dans le travail de groupe.<br> <br>
+							Mais cela m'a permis d'être certain que la carrière d'enseignant
+							dans le secondaire n'etait pas pour moi, malgré le bon contact
+							avec les élèves. En effet, c'est moins le fait d'être en charge
+							d'enfant que le fait de ne pas pouvoir créer mes propres sujets
+							de reflexions qui m'a convaincu que je n'étais pas fait pour être
+							enseignant dans le secondaire. <br> <br>
+						<p class="text-center">
+							janv. 2011-dec. 2013:Docteur en physique de l'atmosphère et
+							chimie de la pollution <br>
+						<p>
+							Afin de valoriser mon diplôme d'ingénieur généraliste, j'ai
+							réalisé une thèse au <a href="http://www.lisa.univ-paris12.fr/fr">LISA</a>
+							dans l'équipe Pollution du laboratoire se situant à l'université
+							Paris Est Créteil. Lors de ces trois ans j'ai pu d'une part
+							apprendre par la recherche à presenter des résultats en publique
+							sur des posters mais aussi en presentation orale. De plus J'ai
+							acquis par l'experience des compétences en architecture logiciel
+							dans mon projet d'algorithme d'aide à la décision dans la
+							sélection de fenêtre spectrale pour la surveillance de l'ozone
+							tropospherique. La seconde partie de ma thèse s'est concentrer
+							sur l'analyse de données et leur intercomparaison afin de
+							determiner les valeurs ajoutées de satellites selectionnées.
+							J'étais pour ma part en charge de l'analyse finale quand mon
+							collègue Pasquale Selitto, lui, se chargeait de la simulation de
+							ces satellite et de la simulation de leurs observation. <br>
+							<br>
+						<p class="text-center">
+							juill. 2008- oct 2010: Ingénieur production/R-D en Alternance
+							chez PSA <br>
+						<p>
+							Apres une année à Paris les conditions de vie où j'étais m'ont
+							contraintes à bifurquer vers un parcours d'ingénieur en
+							alternance. J'ai donc intégré l'ecole d'ingénieur du <a
+								href="http://www.cesi.fr">CESI</a> directement la 2eme année.
+							Lors de cette deuxième année, j'ai travaillé en tant
+							qui'ingénieur de production à l'usine de Poissy de PSA- Peugeot
+							Citroen, mettant en oeuvre la methode Hoshin (dont j'ai aussi
+							fait le sujet de mon premier mémoire). Cette methode est une
+							methode importée du japon visant à optimiser les lignes de
+							production en observant toutes les etapes et toutes les actions
+							lors de ces étapes de la ligne de production.<br> Afin de
+							valider ce diplome, j'ai effectué un Stage au Queen Mary
+							University London pendant deux mois, à londres, experimentant le
+							plongeon dans une nouvelle culture et me permettant du même coup
+							de bien maitriser la langue anglaise.<br> <br> Après ce
+							stage j'ai ensuite intégré le service de Recherche et
+							Developpement de PSA, et j'ai conduit un petit projet interne sur
+							un logiciel de simulation de deformation des structures lors de
+							chocs frontaux et latéraux. L'equipe avec qui je travaillais
+							voyant mon attrait pour la recherche et le developpement et les
+							nouvelles technologies developpées dans l'entreprise m'ont
+							conseillé de valoriser mon diplome d'ingenieur par une thèse mais
+							la situation économique de l'entreprise m'a obligé à postuler en
+							dehors et m'a remis sur la route des études universitaires. <br>
+						<p class="text-center">
+							<br> juill. 2007- oct 2009: équipier chez quick à Chatelet
+						</p>
+						<p class="text-center">
+							<br> <br> juill. 2006- aout 2006: ASH à l'hopital
+							Pellegrin de Bordeaux
+						</p>
+						<p class="text-center">
+							<br> <br>juin. 2006- juill. 2006: Stagiaire de Licence
+
+
+
+						<p>stage CENBG durant lequel j'ai eu mon premier contact avec
+							la simulation informatique. En effet j'ai durant ce stage de
+							licence simuler de façon simplifiée les phenomènes
+							électromagnétique d'une étoile à neutron
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+
+<!--<p><a href="{% url 'blog:index' %}">revenir à l'index</a></p>--!>
+
+{% endblock %}
+{% endblock %}

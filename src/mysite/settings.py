@@ -24,7 +24,7 @@ SECRET_KEY = '-m#ggb7$p1rsh(xmn4@hjc$94gf9-)7bq5z#vnjcu59cj3+h8w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pierre-dauphin.hopto.org','0.0.0.0','localhost']
+ALLOWED_HOSTS = ['pierre-dauphin.hopto.org','0.0.0.0','localhost','127.0.0.1']
 
 
 # Application definition
@@ -36,6 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'blog.apps.BlogConfig',
+
+    'gunicorn',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +57,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 os.path.join(BASE_DIR, 'blog/templates'),
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,14 +78,22 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': 'db.sqlite3',
+#    }
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'mysite',
-	'USER': 'sabrigan',
-	'PASSWORD': 'Poisson@1',
-	'HOST': 'localhost',
-	'PORT': '',
+        'USER': 'sabrigan',
+        'PASSWORD':'Poisson@1',
+        'HOST': 'localhost',
+        'PORT': '',
+
     }
 }
 
@@ -123,3 +137,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR,'static/')
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'blog/static'),
+)

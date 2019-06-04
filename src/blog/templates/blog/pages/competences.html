@@ -1,0 +1,78 @@
+{% extends 'blog/layout/base.html' %}
+
+{% load static %}
+
+{% block title %} Mes Compétences {% endblock %}--!>
+{% block content %}
+<div>
+	<link title="timeline-styles" rel="stylesheet" href="{%static 'timeline3/css/timeline.css'%}">
+    <script src="{%static 'timeline3/js/timeline.js'%}"></script>
+    <div id='timeline-embed' style="width: 100%; height: 600px">
+        <script type="text/javascript">
+            var timeline_json = "{%static 'competence.json'%}";
+            var additionalOptions = {
+             start_at_end: true,
+              default_bg_color: {r:0, g:0, b:0},
+              timenav_height: 150
+            }
+            timeline = new TL.Timeline('timeline-embed',
+                timeline_json,
+                additionalOptions);
+        </script>
+    </div>
+</div>
+
+{% include 'blog/layout/_nav.html' %}
+
+{% block body %}
+<article>
+    <!--<h1 class="title">#{{post.id}} - {{post.title}}</h1>--!>
+    <!--<p class="content">{{post.body}}</p>--!>
+<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<p class="text-center">
+						Domaine de compétence : <br> <br>
+					<ul>
+						<li>Management d'équipe (dans l'associatif et egalement une expérience comme SCRUM Master)</li>
+						<li>Datascience, Machine Learning et Intelligence Artificielle</li>
+						<li>Physique Fondamentale (Electromagnétisme, Mecanique)</li>
+						<li>Télédetection:<br> Au travers de ma thèse j'ai pu
+							pendant 3ans me concentrer sur ce domaine en particulier les
+							sattelites defilants LEO ainsi que l'analyse spectroscopique de
+							l'atmosphère et les notions mathématiques d'inversion permettant la
+							comprehension de ces analyses spectroscopiques
+						</li>
+						<li>Programmation, Simulation: <br>Depuis le debut de
+							mes contacts avec le monde professionnel (lors de stage en
+							laboratoire ou pendant mon alternance) j'ai été plongé dans la
+							programmation qu'elle soit ou non orienté objet. Ces
+							programmations étaient autant lié à la simulation de phénomène
+							physique que de l'analyse de donnée
+						</li>
+						<li>Mathématiques appliquées</li>
+						<li>Gestion d'équipe et de projet:<br> Lors de ma
+							dernière année en alternance chez PSA j'ai eu en charge un projet
+							entreprise (j'avais en charge deux personnes et le
+							retroplanning).
+						</li>
+						<li>Datasciences et Machine Learning:<br> Lors de ma
+							dernière mission au sein de Airbus, j'ai créé avec mon equipe un programme de detection d'UEBA (User Entity Behaviour Anomaly).
+						</li>
+					</ul>
+				</div>
+				<!--<div class="col-md-4">-->
+					<!--<img-->
+						<!--src="https://ununsplash.imgix.net/photo-1423753623104-718aaace6772?w=1024&amp;q=50&amp;fm=jpg&amp;s=1ffa61419561b5c796bca3158e7c704c"-->
+						<!--class="img-responsive">-->
+				<!--</div>-->
+			</div>
+		</div>
+	</div>
+</article>
+
+<!--<p><a href="{% url 'blog:index' %}">revenir à l'index</a></p>--!>
+
+{% endblock %}
+{% endblock %}

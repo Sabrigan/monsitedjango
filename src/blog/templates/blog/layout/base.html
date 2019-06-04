@@ -1,0 +1,26 @@
+{% extends 'layout/base.html' %}
+
+{% load static from staticfiles %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script type="text/javascript"
+	src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript"
+	src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link href="{%static 'css/style1.css'%}" rel="stylesheet" type="text/css">
+<link href="{%static 'css/style2.css'%}" rel="stylesheet" type="text/css">
+<link href="{%static 'css/styles.css'%}" rel="stylesheet" type="text/css">
+{%endblock%}
+
+
+{% block content %}
+
+{%block body%}{%endblock%}
+
+{% block javascripts %}{%endblock%}
+
+{% include 'blog/layout/_footer.html' %}
+
+{%endblock%}

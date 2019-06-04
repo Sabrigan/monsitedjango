@@ -1,0 +1,225 @@
+{
+    "events": [
+        {
+            "start_date": {
+                "year":         "1984",
+                "month":        "05",
+                "day":          "08"
+            },
+            "text": {
+                "headline": "Ma naissance",
+                "text":     "Né le 8 mai 1984 à Bordeaux,"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "1990",
+                "month":        "09",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2002",
+                "month":        "07",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Scolarité à Pessac",
+                "text":     "Primaire à Jean Cordier, Collège Noes, Lycée Pape Clément avec en parallèle UNSS et ecole de musique et pratique de la Clarinette en solo et en orchestre"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2002",
+                "month":        "09",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2007",
+                "month":        "06",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Licence de Physique Fondamentale",
+                "text":     "Université Bordeaux 1"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2007",
+                "month":        "07",
+                "day":          "04"
+            },
+            "end_date": {
+                "year":         "2008",
+                "month":        "03",
+                "day":          "04"
+            },
+            "text": {
+                "headline": "Déménagement à paris et Université paris 7 Denis Diderot",
+                "text":     "Apres le démanégement je continue ma licence et commence un master en physique fondamentale tout en travaillant chez Quick"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2008",
+                "month":        "03",
+                "day":          "04"
+            },
+            "end_date": {
+                "year":         "2010",
+                "month":        "10",
+                "day":          "31"
+            },
+            "text": {
+                "headline": "Remise en question de la façon de trouver mon chemin professionnel",
+                "text":     "L'intégration du cefipa me permet de decouvrir aussi le monde industriel"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2011",
+                "month":        "01",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2014",
+                "month":        "01",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Découverte du milieu universitaire de la recherche",
+                "text":     "Intégration du LISA pour ma thèse "
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2014",
+                "month":        "01",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2015",
+                "month":        "06",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Mise à plat des différentes expériences et recherche d'emploi",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2015",
+                "month":        "10",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2016",
+                "month":        "07",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Enseignement en lycée",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2016",
+                "month":        "07",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2016",
+                "month":        "09",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Decouverte du point commun qui m'a tenu",
+                "text":     "La programmation c'est ma passion"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2016",
+                "month":        "10",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2017",
+                "month":        "04",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Premier contact avec l'industrie du numérique",
+                "text":     "Par une entreprise de prestation j'arrive enfin a être en contact avec le domaine industriel qui me convient"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2017",
+                "month":        "06",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2018",
+                "month":        "03",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Deuxième contact avec l'industrie du numérique mais surtout avec le milieu de la prestation",
+                "text":     "Découverte du domaine spécifique des datasciences et de leurs différentes application"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2018",
+                "month":        "07",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2018",
+                "month":        "10",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Mise en conformité de ma formation avec le domaine qui m'intéresse",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        }
+
+    ]
+}

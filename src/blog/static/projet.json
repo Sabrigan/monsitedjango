@@ -1,0 +1,157 @@
+{
+    "events": [
+        {
+            "start_date": {
+                "year":         "2002",
+                "month":        "05",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2002",
+                "month":        "07",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Etude des propriétés électromagnétiques des pulsars",
+                "text":     "Stage de fin de Licence CENBG"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2008",
+                "month":        "03",
+                "day":          "04"
+            },
+            "end_date": {
+                "year":         "2009",
+                "month":        "06",
+                "day":          "31"
+            },
+            "text": {
+                "headline": "Technique d'optimisation des lignes de production",
+                "text":     "Chez PSA-Peugeot Citroën à Poissy"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2009",
+                "month":        "09",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2010",
+                "month":        "09",
+                "day":          "30"
+            },
+            "text": {
+                "headline": "Gestion de projet d'outils d'analyse de déformation de structure et d'optimisation des géométrie interne dans le contexte de choc ",
+                "text":     "Chez PSA-Peugeot Citroën à Vélizy A "
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2011",
+                "month":        "01",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2013",
+                "month":        "31",
+                "day":          "12"
+            },
+            "text": {
+                "headline": "Evaluation de l'apport d'IASI-NG pour la caractérisation de la qualité de l'air en Europe au travers de l'ozone troposphérique",
+                "text":     "Au LISA à l'UPEC Thèse CNES/EADS Astrium"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2016",
+                "month":        "07",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2016",
+                "month":        "09",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Projet de programmation Java J2EE: banque en ligne fictive",
+                "text":     "Premier projet orienté object"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2016",
+                "month":        "10",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2017",
+                "month":        "04",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Participation a la refonte de page pour GXP Link pour des clients spécifique",
+                "text":     "Travail en collaboration international"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2017",
+                "month":        "06",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2018",
+                "month":        "03",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Projet de Machine Learning dans le contexte de la cybersécurité",
+                "text":     "En prestation chez Airbus D&S"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2018",
+                "month":        "07",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2018",
+                "month":        "10",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Projet de detection des neutrinos en oprenant les données sur Kaggle",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        }
+
+    ]
+}

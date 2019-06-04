@@ -1,0 +1,175 @@
+{
+    "events": [
+        {
+            "start_date": {
+                "year":         "2005",
+                "month":        "06",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2005",
+                "month":        "08",
+                "day":          "01"
+            },
+            "text": {
+            "headline": "ASH au CHU Pellegrin Bordeaux",
+                "text":     "Stage de fin de Licence CENBG"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2006",
+                "month":        "06",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2006",
+                "month":        "07",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Etude des propriétés électromagnétiques des pulsars",
+                "text":     "Stage de fin de Licence CENBG"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2007",
+                "month":        "07",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2007",
+                "month":        "10",
+                "day":          "30"
+            },
+            "text": {
+                "headline": "Equipier polyvalent chez Quick Chatelet-les Halles",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2008",
+                "month":        "09",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2009",
+                "month":        "06",
+                "day":          "15"
+            },
+            "text": {
+                "headline": "Alternance chez PSA Peugeot-Citroën Poissy en tant qu'ingénieur de production",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2009",
+                "month":        "06",
+                "day":          "15"
+            },
+            "end_date": {
+                "year":         "2009",
+                "month":        "09",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Stage au Queen Mary University London en laboratoire de recherche à l'étranger",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2009",
+                "month":        "09",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2010",
+                "month":        "10",
+                "day":          "31"
+            },
+            "text": {
+                "headline": "Alternance chez PSA Peugeot-Citroën Vélizy en tant qu'ingénieur R&D",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2011",
+                "month":        "01",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2013",
+                "month":        "31",
+                "day":          "12"
+            },
+            "text": {
+                "headline": "Doctorat en Sciences de l'environnement, Physique de l'atmosphère et chimie de la pollution",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2016",
+                "month":        "10",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2017",
+                "month":        "04",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Ingénieur clientèle en prestation chez ADP-GSI pour Sodifrance ",
+                "text":     "Travail en collaboration international"
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2017",
+                "month":        "06",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2018",
+                "month":        "03",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Ingéniueur de Recherche Opérationnel en prestation chez Airbus D&S pour Silicom",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        }
+    ]
+}

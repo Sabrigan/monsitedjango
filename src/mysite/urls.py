@@ -15,7 +15,30 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import re_path, url
+from django.contrib import admin
+from django.urls import path, include
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+
+from . import views
+
+handler404 = 'mysite.views.handler404'
+handler500 = 'mysite.views.handler500'
+
 
 urlpatterns = [
+    re_path('^$', views.home, name='home'),
+    re_path('^about/', views.about, name='about'),
+    re_path('^contact/', views.contact, name='contact'),
+    url(r'^blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+
+
+admin.site.site_header = "Sabrigan Admin"
+admin.site.site_title = "Portail Administration Sabrigan"
+admin.site.index_title = "Bienvenue sur le site admin de MR Sabrigan"

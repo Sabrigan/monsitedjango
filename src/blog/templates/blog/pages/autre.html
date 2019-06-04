@@ -1,0 +1,87 @@
+{% extends 'blog/layout/base.html' %}
+
+{% load static %}
+
+{% block title %} Informatique {% endblock %}--!>
+{% block content %}
+<div>
+	<link title="timeline-styles" rel="stylesheet" href="{%static 'timeline3/css/timeline.css'%}">
+    <script src="{%static 'timeline3/js/timeline.js'%}"></script>
+    <div id='timeline-embed' style="width: 100%; height: 600px">
+        <script type="text/javascript">
+            var timeline_json = "{%static 'autre.json'%}";
+            var additionalOptions = {
+             start_at_end: true,
+              default_bg_color: {r:0, g:0, b:0},
+              timenav_height: 150
+            }
+            timeline = new TL.Timeline('timeline-embed',
+                timeline_json,
+                additionalOptions);
+        </script>
+    </div>
+</div>
+
+{% include 'blog/layout/_nav.html' %}
+{% block body %}
+<article>
+    <!--<h1 class="title">#{{post.id}} - {{post.title}}</h1>--!>
+    <!--<p class="content">{{post.body}}</p>--!>
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<p class="text-center">
+						Autres renseignements:<br> <br>
+					<p>
+						Musique:<br> Comme mon frère et ma soeur, mes parents m'ont
+						permis d'apprendre la musique en essayant d'abord le violon puis
+						passant à la clarinette. J'ai pu apprendre cette discipline à <a
+							href="http://musique.verthamon.free.fr"> l'école municipale
+							de musique de Verthamon Hautbrion</a> J'ai participé pendant presque
+						10ans à l'orchestre harmonique (puis symphonique). Cela m'a permis
+						d'abord de rester humble dans un groupe mais aussi cela m'a permis
+						de développer ma capacité à écouter un groupe et à y travailler.<br>
+						<br>
+					</p>
+					<p>
+						Science:<br> Mon attrait pour la science et les technologies
+						se sont rapidement traduits par une attirance envers certaine
+						discipline. Petit au centre aéré du <a
+							href="http://www.letauzin.com">chateau du Tauzin</a> on m'a
+						initié à la photographie et surtout son développement à l'époque
+						encore argentique. Puis plus agé j'ai pu redécouvrir le
+						développement photographique et les animateurs du centre <a
+							href="https://www.jeunes-science.asso.fr">Jeunes Science</a>
+						m'ont initiés à l'astronolie et la photgraphie astronomique.
+						Malheureusement habitant en ville je n'ai pas encore pu fabriquer
+						mon propre télescope et m'y remettre.<br> <br>
+					</p>
+					<p>
+						Sport:<br> Apres avoir pendant mon adolescence fait du judo
+						allant jusqu'à la ceinture bleu, je me suis mis à la natation et à
+						la plongée sous-marine.
+					</p>
+				</div>
+				<!--<div>-->
+					<!--<script src="//platform.linkedin.com/in.js" type="text/javascript">-->
+						<!--lang: en_US-->
+					<!--</script>-->
+					<!--<script type="IN/Share" data-url="https://www.linkedin.com"></script>-->
+				<!--</div>-->
+				<!--<div class="col-md-4">-->
+					<!--<img src="{% static 'blog/img/saturne.jpg'%}" /> <img src=""-->
+						<!--class="img-responsive">-->
+				<!--</div>-->
+			</div>
+		</div>
+	</div>
+</article>
+
+<article>
+
+</article>
+
+
+{% endblock %}
+{% endblock %}

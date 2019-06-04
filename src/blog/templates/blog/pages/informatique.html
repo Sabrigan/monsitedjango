@@ -1,0 +1,73 @@
+{% extends 'blog/layout/base.html' %}
+
+{% load static %}
+
+{% block title %} Informatique {% endblock %}
+
+
+{% block body %}
+
+{% include 'blog/layout/_nav.html' %}
+
+
+<article>
+<div class="section">
+		<div class="container">
+			<p class="text-center">Ci-dessous vous pouvez voir une
+				auto-évaluation des differents langages de programmation et autres
+				concepts liés que j'ai pu tester ou utiliser de façon courante lors
+				de mes differentes expériences</p>
+			<div class="row">
+				<div class="col-md-4">
+					<ul>
+						<li><progress value="70" max="100">70%</progress>Python</li>
+						<li><progress value="70" max="100">70%</progress>Apprentissage supervisé</li>
+						<li><progress value="70" max="100">70%</progress>kera</li>
+						<li><progress value="70" max="100">70%</progress>seaborn</li>
+						<li><progress value="70" max="100">70%</progress>UML</li>
+						<li><progress value="80" max="100">80%</progress>Java</li>
+						<li><progress value="50" max="100">50%</progress>SQL</li>
+						<li><progress value="50" max="100">50%</progress>JUNIT</li>
+						<li><progress value="30" max="100">30%</progress>Design Pattern</li>
+						<li><progress value="40" max="100">40%</progress>CDI</li>
+						<li><progress value="80" max="100">80%</progress>Jsf</li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<ul>
+						<li><progress value="70" max="100">70%</progress>R</li>
+						<li><progress value="70" max="100">70%</progress>Deep Learning</li>
+						<li><progress value="70" max="100">70%</progress>ggplot2</li>
+						<li><progress value="80" max="100">80%</progress>Jsp</li>
+						<li><progress value="60" max="100">60%</progress>Maven</li>
+						<li><progress value="40" max="100">40%</progress>EJB</li>
+						<li><progress value="40" max="100">40%</progress>Web Service</li>
+						<li><progress value="40" max="100">40%</progress>Java
+							Security</li>
+						<li><progress value="70" max="100">70%</progress>Scrum</li>
+						<li><progress value="50" max="100">50%</progress>Spring</li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<ul>
+						<li><progress value="70" max="100">70%</progress>panda</li>
+						<li><progress value="70" max="100">70%</progress>Django</li>
+						<li><progress value="70" max="100">70%</progress>scikit-learn</li>
+						<li><progress value="75" max="100">75%</progress>Github</li>
+						<li><progress value="60" max="100">60%</progress>Angular JS</li>
+						<li><progress value="90" max="100">90%</progress>Fortran</li>
+						<li><progress value="80" max="100">80%</progress>IDL</li>
+						<li><progress value="60" max="100">60%</progress>MatLab</li>
+						<li><progress value="40" max="100">20%</progress>Unity C#</li>
+						<li><progress value="40" max="100">40%</progress>Bash</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</article>
+
+<!--<p><a href="{% url 'blog:index' %}">revenir à l'index</a></p>--!>
+
+{% endblock %}

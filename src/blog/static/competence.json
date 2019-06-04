@@ -1,0 +1,176 @@
+{
+    "events": [
+        {
+            "start_date": {
+                "year":         "1984",
+                "month":        "05",
+                "day":          "08"
+            },
+            "end_date": {
+                "year":         "2002",
+                "month":        "07",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Curiosité, Travail en équipe, Maitrise de soi",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2002",
+                "month":        "09",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2008",
+                "month":        "06",
+                "day":          "31"
+            },
+            "text": {
+                "headline": "Programmation Fortran 90, Développement des compétences de mathématiques appliquées, Utilisation des concepts scientifiques pour l'application technique",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2008",
+                "month":        "09",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2009",
+                "month":        "06",
+                "day":          "30"
+            },
+            "text": {
+                "headline": "Négociation, gestion d'équipe, optimisation, gestion de production",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2009",
+                "month":        "09",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2010",
+                "month":        "10",
+                "day":          "30"
+            },
+            "text": {
+                "headline": "Gestion d'équipe, Gestion de projet, Programmation MatLab, Bash, Optimisation, Simulation",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2011",
+                "month":        "01",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2013",
+                "month":        "31",
+                "day":          "12"
+            },
+            "text": {
+                "headline": "Télédétection, Recherche opérationnelle, Recherche documentaire, Programmation fonctionnelle, Automatisation de tâche, Analyse de donnée Massive, Traitement statistique des données ",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2014",
+                "month":        "01",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2016",
+                "month":        "09",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Bilan personnel et professionnel, Autoformation sur les langage web",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2016",
+                "month":        "10",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2017",
+                "month":        "04",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Gestion d'équipe, Methodologie SCRUM, Programmation orienté objet, Collaboration intenationale",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2017",
+                "month":        "06",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2018",
+                "month":        "03",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Machine Learning, Cybersécurité, Programmation fonctionnelle, Intelligence Artificielle",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        },
+        {
+            "start_date": {
+                "year":         "2018",
+                "month":        "07",
+                "day":          "01"
+            },
+            "end_date": {
+                "year":         "2018",
+                "month":        "10",
+                "day":          "01"
+            },
+            "text": {
+                "headline": "Natural Language Processing, Recurrent Neural Network, Convolutionnal Neural Network, Apprentissage supervisé et non supervisé, Datavisualisation, Dataprocessing",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        }
+
+    ]
+}
