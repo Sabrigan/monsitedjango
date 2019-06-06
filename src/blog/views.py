@@ -1,29 +1,25 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, Http404
 
-from .models import Post
+from .models import Post_Bio
 
-
-# from .mocks import Post
-
-def index(request):
-    posts = Post.objects.all()
-    return render(request, 'blog/index.html', {'posts': posts})
+#def index(request):
+#    posts = Post_Bio.objects.all()
+#    pass
+#    return render(request, 'blog/bio.html', {'posts': posts})
 
 
-def show(request, id):
-    post = get_object_or_404(Post, pk=id)
-    #    try:
-    #        post = Post.objects.get(pk = id)
-    #    except Post.DoesNotExist:
-    #        raise Http404('Sorry the post #{} was not found'.format(id))
-    return render(request, 'blog/show.html', {'post': post})
+# def show(request, id):
+#     try:
+#         post = Post_Bio.objects.get(pk = id)
+#     except Post_Bio.DoesNotExist:
+#         raise Http404('Sorry the post #{} was not found'.format(id))
+#     return render(request, 'blog/show.html', {'post': post})
 
 
 def bio(request):
-    # def bio(request, id):
-    # post-bio = get_object_or_404(PostBio, pk=id)
-    # return render(request, 'blog/bio.html', {'post-bio': post-bio})
-    return render(request, 'blog/pages/bio.html')
+    posts_bio = Post_Bio.objects.all()
+#    return render(request, 'blog/bio.html', {'posts': posts_bio})
+    return render(request, 'blog/pages/bio.html',{'posts': posts_bio})
 
 def projets(request):
     # def bio(request, id):

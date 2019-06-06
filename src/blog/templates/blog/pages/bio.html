@@ -3,16 +3,17 @@
 
 {% block title %} Bio{% endblock %}
 {% block content %}
-<div>
+<div style="background-image:{% static 'blog/img/fond1.jpg' %}">
 	<link title="timeline-styles" rel="stylesheet" href="{%static 'timeline3/css/timeline.css'%}">
     <script src="{%static 'timeline3/js/timeline.js'%}"></script>
-    <div id='timeline-embed' style="width: 100%; height: 600px">
+    <div id='timeline-embed' style="width: 100%; height: 600px" >
         <script type="text/javascript">
-            var timeline_json = "{%static 'bio.json'%}";
+            var timeline_json = "{%static 'blog/bio.json'%}";
             var additionalOptions = {
              start_at_end: true,
               default_bg_color: {r:0, g:0, b:0},
-              timenav_height: 150
+              timenav_height: 150,
+
             }
             timeline = new TL.Timeline('timeline-embed',
                 timeline_json,
@@ -25,151 +26,38 @@
 
 
 {% block body %}
+<div align="center">
+<blockquote>
+     <p>Petit résumé</p>
+        {% for post in posts%}
+        <footer>{{post.title}}</footer>
+        {% endfor %}
+ </blockquote>
+</div>
+
+
+
 <article>
-    <!--<h1 class="title">#{{post.id}} - {{post.title}}</h1>--!>
-    <!--<p class="content">{{post.body}}</p>--!>
     <div class="section">
         <div class="container">
-            <h1>Petite biographie</h1>
             <div class="row">
-                <div class="col-md-4">
-                    <p>Né le 8 mai 1984 à Bordeaux, j'ai grandi dans une famille de
-                        5 personnes. Mon père, professeur, et ma mère, infirmière, m'ont
-                        très vite poussé à faire de la musique. D'abord un peu de violon
-                        mais ayant les oreilles sensibles et mon frère et ma soeur en bas
-                        age, mes parents ont vite accepté que j'abandonne pour un autre
-                        instrument, la clarinette, moins crispant lors de mauvaises notes.</p>
-                    <p>
-                        J'ai également lors de mon enfance découvert un certain nombre de
-                        domaines comme l'astronomie, l'informatique, la photographie et
-                        son developpement. Mon frere et ma soeur (jumeaux) ont eux aussi
-                        bénéficiés de cet apport de la musique, ma soeur en ayant même
-                        fait une partie de son travail en tant que luthière. Vous
-                        trouverez sur ces points plus de détails dans la partie <a
-                            href="autre.html">Autre</a>
-                    </p>
+                <h1>Petite biographie</h1>
+                {% for post in posts%}
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>{{post.title}}</h5>
+                        <p align="justify">{{post.body|safe}}</p>
+                    </div>
+                    {%if forloop.counter|divisibleby:"3" %}
                 </div>
-                <div class="col-md-4">
-                    <p>
-                        Ayant un attrait pour la recherche et plus précisement
-                        l'astrophysique au depart j'ai commencé mes études supérieures à
-                        l'université Bordeaux 1 et ai effectué une licence en physique
-                        fondamentale. En 2007, j'ai déménagé à Paris afin de continuer en
-                        effectuant un master mais devant travailler en même temps j'ai
-                        effectué un changement dans mon parcours en intégrant <a
-                            href="https://www.cefipa.com">l'école d'ingénieur du CESI</a>
-                        directement en deuxième année dans le parcours en alternance.
-                    </p>
-                    <p>
-                        Apres deux ans en alternance chez PSA Peugeot Citroën
-                        d'abord à Poissy en production puis en recherche et developpement,
-                        j'ai effectué une thèse à Créteil pendant laquelle j'ai découvert
-                        ma passion pour la programmation. J'ai développé en IDL (un
-                        langage spécifique à la télédétection) un algorithme permettant
-                        d'optimiser le choix des canaux spectraux de satellite pour la
-                        télédétection de l'ozone troposphérique, polluant atmosphérique.
-                        Parallèlement à cet algorithme j'ai mis en place ce que l'on appel
-                        OSSE (Observing Systeme Simulation Experiment) permettant de
-                        comparer les performances d'un système d'observation.
-                    </p>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <p>
-                        Arrivé jusque là, j'ai postulé tant sur des postes de
-                        recherches dans le publique que d'ingénieur dans le privé. Mes
-                        diplomes ne reflétant pas mes compétences, je me suis donc tourné
-                        vers la formation proposer par GTM-Ingénierie afin d'obtenir les
-                        compétences nécessaires pour devenir Developpeur Java JEE
-                    </p>
-                    <p>
-                        Ce retour à l'informatique appliqué fut le fruit d'une
-                        reflexion pendant l'année de professorat que j'ai effectué dans un
-                        lycée professionnel. Durant cette année j'ai été en charge des
-                        cours de mathématique et physique chimie de classes allant du CAP
-                        au terminal de bac professionnel.
-                    </p>
-                    <p>
-                        Suite donc à la formation en Java JEE faite chez GTM-Ingénierie,
-                        formation tres acces pratique et peu théorique, j'ai intégré une
-                        entreprise de presation, <a href="https://www.sodifrance.fr">
-                        Sodifrance </a>. Cherchant d'abord à renforcer mes compétences
-                        informatique, j'ai été envoyé chez <a
-                            href="https://www.fr.adp.com"> ADP-GSI </a> en tant que
-                        développeur. Durant les quelques mois où j'ai pu contribuer a
-                        cette entreprise j'ai été en fin de compte mis sur un poste de
-                        relation client. Le sujet de la gestion RH n'etait deja pas mon
-                        objectif de carrière donc j'ai demandé en interne un changement de
-                        poste. Parallèlement à cela j'ai cherché dans mes contacts et
-                        trouver une personnes travaillant pour une autre entreprise de
-                        service numérique. Nous avons echangé et m'a été proposé un poste
-                        tres interessant.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <p>
-                        J'ai donc reussi à trouver un poste qui corresponde à mon plan de
-                        carrière. L'entreprise Silicom m'a donc envoyé en prestation de
-                        service dans une des nouvelles equipes de cybersécurité de
-                        l'entreprise <a href="https://airbus-cyber-security.com/fr/">
-                        Airbus Defense and Space</a>. Durant les mois de juin à aout alors
-                        que les équipes sont en vacances je me suis autoformé sur les
-                        sujet de cybersécurité et machine learning afin de repondre à un
-                        appel d'offre gouvernemental. Nous avons avec notre équipe
-                        developpé un systeme de detection des anomalie de comportement
-                        dans un systeme d'information. Apres le test de differentes
-                        méthode nous avons opter pour un algorithme developper par un
-                        groupe issu de HP qui est de type isolation forest. Cette mission
-                        terminée en janvier, Silicom a tenté de caser mon profil sur des
-                        missions un peu plus éloigné de mes compétences malgré mes
-                        avertissements. J'ai donc suggérer qu'il me permette de me former
-                        sur les datasciences qui est un secteur en pleine explosion et que
-                        silicom n'avait pas du tout investi. Nous nous sommes donc séparé.
-                    </p>
-                    <p>
-                        Heureusement a peine deux mois apres cette séparation, Pole emploi
-                        m'a proposé une formation en datasciences, avec <a
-                            href="http://www.ortformation.com"> ORT </a> et <a
-                            href="https://datascientest.com"> Datascientest </a>. Nous avons
-                        étudié donc la data visualisation, les regressions,
-                        classifications, NLP, computation vision, reseaux de neurones.
-                    </p>
-                    <p>Parallèlement a mon parcours professionnel je suis depuis
-                        avril 2018 au conseil d'administration d'une des grandes
-                        associations de lutte contre le sida en tant que cosecretaire
-                        générale. Cela m'a permis de developper mes compétences de
-                        gestion.
-                    </p>
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
-            <blockquote>
-                <p>Petit résumé</p>
-                <footer>Naissance à Bordeaux en 1984</footer>
-                <footer>Père professeur, mère infirmière</footer>
-                <footer>Déménagement seul en 2007 pour vivre à Paris</footer>
-                <footer>Persévérence dans mes études jusqu'à obtenir le
-                    status de docteur ES sciences en "Physique de l'atmosphère et
-                    chimie de la pollution"</footer>
-                <footer>Pas d'hesitation à se remettre en question pour
-                    arriver à mes objectifs</footer>
-                <footer>Professorat</footer>
-                <footer>Intégration de la formation GTM-Ingenierie en Java
-                    JEE afin de trouver un poste dans le domaine qui m'interesse
-                    réellement maintenant</footer>
-                <footer>ADP GSI</footer>
-                <footer>Airbus Defense and Space</footer>
-                <footer>Formation datascientist via la plateforme
-                    Datascientest</footer>
-                <footer>Responsabilité associative au sein d'une
-                    association de lutte contre le VIH</footer>
-            </blockquote>
         </div>
     </div>
-
-
 </article>
-
-<!--<p><a href="{% url 'blog:index' %}">revenir à l'index</a></p>--!>
 
 {% endblock %}
 {% include 'blog/layout/_footer.html' %}

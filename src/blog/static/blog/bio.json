@@ -217,7 +217,8 @@
                 "text":     ""
             },
             "background": {
-                "color": "#737373"
+                "color": "#737373",
+                "url": "~/img/fond1.jpg"
             }
         }
 
