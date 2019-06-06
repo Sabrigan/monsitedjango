@@ -1,0 +1,18 @@
+{
+    "events": [
+        {
+            "start_date": {
+                "year":         "2019",
+                "month":        "05",
+                "day":          "08"
+            },
+            "text": {
+                "headline": "",
+                "text":     ""
+            },
+            "background": {
+                "color": "#737373"
+            }
+        }
+    ]
+}
