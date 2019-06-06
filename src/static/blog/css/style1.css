@@ -2280,3 +2280,11 @@ keyframes fa-spin { 0%{
 .fa-medium:before {
 	content: "\f23a"
 }
+
+.ma-div-de-tl {
+    position: absolute;
+    background: url(img/fond1.jpg) center center;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+}

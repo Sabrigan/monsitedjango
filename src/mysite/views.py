@@ -1,8 +1,11 @@
 from django.shortcuts import render
 
+from blog.models import Post_Bio
 
 def home(request):
-    return render(request, 'blog/pages/bio.html')
+    posts_bio = Post_Bio.objects.all()
+    #    return render(request, 'blog/bio.html', {'posts': posts_bio})
+    return render(request, 'blog/pages/bio.html', {'posts': posts_bio})
 
 def about(request):
     return render(request, 'pages/about.html')

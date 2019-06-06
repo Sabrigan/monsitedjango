@@ -14,6 +14,10 @@ from .models import Post_Bio
 #     except Post_Bio.DoesNotExist:
 #         raise Http404('Sorry the post #{} was not found'.format(id))
 #     return render(request, 'blog/show.html', {'post': post})
+def index(request):
+    posts_bio = Post_Bio.objects.all()
+#    return render(request, 'blog/bio.html', {'posts': posts_bio})
+    return render(request, 'blog/pages/bio.html',{'posts': posts_bio})
 
 
 def bio(request):
