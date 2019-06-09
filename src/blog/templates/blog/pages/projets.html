@@ -28,7 +28,7 @@
 
 {% block body %}
 <article>
-   {% for post in posts%}
+   {% for post in posts reversed %}
     <div class="section">
         <div class="container">
             <div class="row">
@@ -36,30 +36,32 @@
                     <h1>{{post.title}}</h1>
                     <br>
                     <h5>Domaine(s) utilisé(s): {{post.domain}}</h5>
+                    {% for domains in post.domain_list %}
+                    <footer>{{domains}}</footer>
                     <p class="text-center">
                         <br> <br> {{post.intro}}
                     </p>
                   <button onclick="myFunction({{post.id}})">plus de detail</button>
-                    <div id="{{post.id}}">{{post.body}}</div>
+                    <div id="{{post.id}}" style="visibility:hidden">{{post.body}}</div>
                 </div>
                 <div class="col-md-2">
                     {% if post.image1  %}
-                    <figure><img src="{{post.avatar1.url}}" alt="{{post.legende1}}"></figure>
+                    <figure><img src="{{post.avatar1.url}}" alt="{{post.legende1}}" style="border-radius:50%;width:300px"></figure>
                     {% endif %}
                     {% if post.image2  %}
-                    <figure><img src="{{post.avatar2.url}}" alt="{{post.legende2}}"></figure>
+                    <figure><img src="{{post.avatar2.url}}" alt="{{post.legende2}}" style="border-radius:50%;width:300px"></figure>
                     <br>
                     {% endif %}
                     {% if post.image3  %}
-                    <figure><img src="{{post.avatar3.url}}" alt="{{post.legende3}}"></figure>
+                    <figure><img src="{{post.avatar3.url}}" alt="{{post.legende3}}" style="border-radius:50%;width:300px"></figure>
                     <br>
                     {% endif %}
                 </div>
             </div>
-            {% endfor %}
             </div>
         </div>
     </div>
+    {% endfor %}
 </article>
 
 <script>

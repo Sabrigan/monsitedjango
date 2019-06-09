@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'imagekit',
+    'django_mysql',
 
     'blog.apps.BlogConfig',
 

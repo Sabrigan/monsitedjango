@@ -1,6 +1,8 @@
 from django.db import models
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
+from django_mysql.models import ListCharField
+
 
 
 
@@ -24,7 +26,11 @@ class Post_Bio(TimstampModel):
 class Post_Projet(TimstampModel):
     title=models.CharField(max_length=150)
     intro=models.TextField()
-    domain=models.CharField(max_length=500)
+    domain=ListCharField(
+        base_field=models.CharField(max_length=25),
+        size=6,
+        max_length=(6 * 26)  # 6 * 10 character nominals, plus commas
+    )
     body=models.TextField()
     image1=models.ImageField(blank=True,upload_to='img/')
     legende1=models.CharField(max_length=100,blank=True)
