@@ -1,6 +1,7 @@
 {% extends 'blog/layout/base.html' %}
 
 {% load static %}
+{% load imagekit %}
 
 {% block title %} Mes Projets {% endblock %}--!>
 {% block content %}
@@ -27,172 +28,50 @@
 
 {% block body %}
 <article>
-    <!--<h1 class="title">#{{post.id}} - {{post.title}}</h1>--!>
-    <!--<p class="content">{{post.body}}</p>--!>
+   {% for post in posts%}
     <div class="section">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <h1>Projet GTM-Ingenierie :</h1>
+                    <h1>{{post.title}}</h1>
+                    <br>
+                    <h5>Domaine(s) utilisé(s): {{post.domain}}</h5>
                     <p class="text-center">
-                        <br> <br> Dans le cadre de la formation nous avons
-                        developpé une application Java JEE en integrant differentes
-                        technologie telle que JSF JPA ou de simple page html dont vous
-                        pouvez voir une capture d'ecran ici.
+                        <br> <br> {{post.intro}}
                     </p>
+                  <button onclick="myFunction({{post.id}})">plus de detail</button>
+                    <div id="{{post.id}}">{{post.body}}</div>
                 </div>
-                <!--<div class="col-md-2">-->
-                    <!--<img src="{% static 'blog/img/logo_gtm.jpg'%}" class="img-responsive">-->
-                <!--</div>-->
-                <!--<div class="col-md-2">-->
-                    <!--<img src="{% static 'blog/img/logo_gtm.jpg'%}" class="img-responsive">-->
-                <!--</div>-->
+                <div class="col-md-2">
+                    {% if post.image1  %}
+                    <figure><img src="{{post.avatar1.url}}" alt="{{post.legende1}}"></figure>
+                    {% endif %}
+                    {% if post.image2  %}
+                    <figure><img src="{{post.avatar2.url}}" alt="{{post.legende2}}"></figure>
+                    <br>
+                    {% endif %}
+                    {% if post.image3  %}
+                    <figure><img src="{{post.avatar3.url}}" alt="{{post.legende3}}"></figure>
+                    <br>
+                    {% endif %}
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">L'equipe du projet final était la
-                        suivante</h2>
-                    <p class="text-center">nous avons travaillé en nous
-                        repartissant les taches et en utilisant Git afin de travailler
-                        même chez soi</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <!--<img src="{% static 'blog/img/moi.jpg'%}"-->
-                         <!--class="center-block img-circle img-responsive">-->
-                    <h3 class="text-center">Pierre Dauphin</h3>
-                    <p class="text-center">Developeur Java JEE reponsable de...</p>
-                </div>
-                <!--<div class="col-md-4">-->
-                    <!--<img-->
-                            <!--src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"-->
-                            <!--class="center-block img-circle img-responsive">-->
-                    <!--<h3 class="text-center">John Doe</h3>-->
-                    <!--<p class="text-center">Developer</p>-->
-                <!--</div>-->
-                <!--<div class="col-md-4">-->
-                    <!--<img-->
-                            <!--src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"-->
-                            <!--class="center-block img-circle img-responsive">-->
-                    <!--<h3 class="text-center">John Doe</h3>-->
-                    <!--<p class="text-center">Developer</p>-->
-                <!--</div>-->
+            {% endfor %}
             </div>
         </div>
     </div>
-    <div class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1>Projet Algorithme These :</h1>
-                    <p class="text-center">
-                        <br> <br> Dans le cadre de ma thèse de doctorat j'ai
-                        créé un algorithme d'aide à la décision. Il permettait de
-                        determiner un certain nombre de fenêtre du spectre infrarouge pour
-                        la surveillance de la concentration atmosphérique en ozone à des
-                        altitude proche de nous (entre la surface de la terre et 6km)
-                    </p>
-                    <p class="text-center">
-                        <br> <br>L'algorithme en question possède 3 parties
-                        distinctes:
-                    <ol>
-                        <li>la recherche du point de depart dans la zone du spectre
-                            de la plus interessante en terme de contenu en information sur
-                            l'espèce traquée et constitution de la banque de microfenetres
-                            spectrales à tester
-                        </li>
-                        <li>tests sur la combinaison des differentes microfenêtres de
-                            la banque constituée précédemment en partant du point defini
-                            précédemment. Ces test sont effectués en faisant varier 3 paramètres
-                            afin d'avoir le plus grand nombre possible de selection
-                        </li>
-                        <li>comparaison des différentes sélection faites dans l'étape
-                            précédentes
-                        </li>
-                    </ol>
-                </div>
-                <!--<div class="col-md-4">-->
-                    <!--<img src="{% static 'blog/img/lisa.jpg'%}" class="img-responsive"/>-->
-                <!--</div>-->
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">L'equipe du projet était la suivante</h2>
-                    <p class="text-center">J'ai développé moi-même toutes les parties
-                        de l'algorithme mais j'étais sous la direction de ma directrice de
-                        thèse et j'ai été soutenu dans ma démarche tant du point de vue
-                        technique que de la motivation par Pascalle Selitto</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <!--<img src="{% static 'blog/img/moi.jpg'%}"-->
-                         <!--class="center-block img-circle img-responsive">-->
-                    <h3 class="text-center">Pierre Dauphin</h3>
-                    <p class="text-center">Docteur en chimie de la pollution et physique de l'atmosphère</p>
-                </div>
-                <div class="col-md-4">
-                    <!--<img src="{% static 'blog/img/lino.jpg'%}"-->
-                         <!--class="center-block img-circle img-responsive">-->
-                    <h3 class="text-center">Pascale Selitto</h3>
-                    <p class="text-center">Docteur en sciences de l'atmosphère
-                        chercheur à l'ecole normale Supérieur dans le laboratoire LMD</p>
-                </div>
-                <div class="col-md-4">
-                    <!--<img src="{% static 'blog/img/gaelledufour.jpg'%}"-->
-                         <!--class="center-block img-circle img-responsive">-->
-                    <h3 class="text-center">Gaëlle Dufour</h3>
-                    <p class="text-center">Directrice de thèse</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1>Projet CV Site Internet :</h1>
-                    <p class="text-center">
-                        <br> <br> Voulant être developpeur j'ai décidé avec deux
-                        autres personnes de la formation de faire un site internet pour me
-                        presenter.
-                    </p>
-                </div>
-                <!--<div class="col-md-4">-->
-                    <!--<img src="{% static 'blog/img/fond1.jpg'%}" class="img-responsive">-->
-                <!--</div>-->
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">L'equipe du projet était la suivante</h2>
-                    <p class="text-center">J'ai développé moi-même les differentes
-                        page m'aidant de quelques outils dont Pingendo afin que cela aille
-                        plus vite. Romain Fortas a été la personne qui en plus de me
-                        coacher m'a permis de le mettre en ligne.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <!--<img src="{% static 'blog/img/moi.jpg'%}"-->
-                         <!--class="center-block img-circle img-responsive">-->
-                    <h3 class="text-center">Pierre Dauphin</h3>
-                    <p class="text-center">Docteur/Ingénieur/Développeur/Datascientist</p>
-                </div>
-                <div class="col-md-6">
-                    <!--<img-->
-                            <!--src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"-->
-                            <!--class="center-block img-circle img-responsive">-->
-                    <h3 class="text-center"><a href="http://www.romainfortas.fr">Romain Fortas</a></h3>
-                    <p class="text-center">Developeur Java JEE et coach pour ce projet </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </article>
 
-<!--<p><a href="{% url 'blog:index' %}">revenir à l'index</a></p>--!>
+<script>
+function myFunction(x) {
+	if(document.getElementById(x).style.visibility == "hidden"){
+    document.getElementById(x).style.visibility = "visible"
+    }else{
+    document.getElementById(x).style.visibility = "hidden"
+    }
+}
+</script>
+
 
 {% endblock %}
 {% endblock %}

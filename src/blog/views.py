@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, Http404
 
-from .models import Post_Bio
+from .models import Post_Bio,Post_Projet
 
 #def index(request):
 #    posts = Post_Bio.objects.all()
@@ -26,10 +26,9 @@ def bio(request):
     return render(request, 'blog/pages/bio.html',{'posts': posts_bio})
 
 def projets(request):
-    # def bio(request, id):
-    # post-bio = get_object_or_404(PostBio, pk=id)
-    # return render(request, 'blog/bio.html', {'post-bio': post-bio})
-    return render(request, 'blog/pages/projets.html')
+    posts_projets = Post_Projet.objects.all()
+    return render(request, 'blog/pages/projets.html', {'posts': posts_projets})
+    #return render(request, 'blog/pages/projets.html')
 
 
 def competences(request):
