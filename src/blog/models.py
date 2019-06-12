@@ -3,9 +3,6 @@ from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
 from django_mysql.models import ListCharField
 
-
-
-
 class TimstampModel(models.Model):
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
@@ -28,8 +25,8 @@ class Post_Projet(TimstampModel):
     intro=models.TextField()
     domain=ListCharField(
         base_field=models.CharField(max_length=25),
-        size=6,
-        max_length=(6 * 26)  # 6 * 10 character nominals, plus commas
+        size=10,
+        max_length=(10 * 26)  # 100 * 25 character nominals, plus commas
     )
     body=models.TextField()
     image1=models.ImageField(blank=True,upload_to='img/')
@@ -47,3 +44,15 @@ class Post_Projet(TimstampModel):
     def __str__(self):
         return self.title
 
+
+
+class Post_Experience(TimstampModel):
+    title = models.CharField(max_length=150)
+    description_sub_neg = models.TextField(blank=True)
+    description_objective = models.TextField(blank=True)
+    description_sub_pos = models.TextField(blank=True)
+    entreprises = ListCharField(base_field=models.CharField(max_length=25,blank=True), size=5, max_length=(5 * 26))
+    competences = ListCharField(base_field=models.CharField(max_length=25, blank=True), size=5, max_length=(5 * 26))
+    duree = models.DurationField(blank=True)
+    start_date = models.DateField()
+    end_date = models.DateField()

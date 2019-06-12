@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, Http404
 
-from .models import Post_Bio,Post_Projet
+from .models import Post_Bio,Post_Projet, Post_Experience
 
 #def index(request):
 #    posts = Post_Bio.objects.all()
@@ -16,44 +16,31 @@ from .models import Post_Bio,Post_Projet
 #     return render(request, 'blog/show.html', {'post': post})
 def index(request):
     posts_bio = Post_Bio.objects.all()
-#    return render(request, 'blog/bio.html', {'posts': posts_bio})
     return render(request, 'blog/pages/bio.html',{'posts': posts_bio})
 
 
 def bio(request):
     posts_bio = Post_Bio.objects.all()
-#    return render(request, 'blog/bio.html', {'posts': posts_bio})
     return render(request, 'blog/pages/bio.html',{'posts': posts_bio})
 
 def projets(request):
     posts_projets = Post_Projet.objects.all()
     return render(request, 'blog/pages/projets.html', {'posts': posts_projets})
-    #return render(request, 'blog/pages/projets.html')
 
 
 def competences(request):
-    # def bio(request, id):
-    # post-bio = get_object_or_404(PostBio, pk=id)
-    # return render(request, 'blog/bio.html', {'post-bio': post-bio})
-    return render(request, 'blog/pages/competences.html')
-
+    post_competence = Post_Experience.objects.all()
+    return render(request, 'blog/pages/competences.html', {'posts': post_competence})
 
 
 def experiences(request):
-    # def bio(request, id):
-    # post-bio = get_object_or_404(PostBio, pk=id)
-    # return render(request, 'blog/bio.html', {'post-bio': post-bio})
-    return render(request, 'blog/pages/experiences.html')
-
+    post_experience = Post_Experience.objects.all()
+    return render(request, 'blog/pages/experiences.html', {'posts': post_experience})
 
 
 def informatique(request):
-    # def bio(request, id):
-    # post-bio = get_object_or_404(PostBio, pk=id)
-    # return render(request, 'blog/bio.html', {'post-bio': post-bio})
-    return render(request, 'blog/pages/informatique.html')
-
-
+    post_informatique = Post_Experience.objects.all()
+    return render(request, 'blog/pages/informatique.html', {'posts': post_informatique})
 
 def autre(request):
     # def bio(request, id):

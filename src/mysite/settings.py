@@ -36,10 +36,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
 
     'django_extensions',
     'imagekit',
-    'django_mysql',
+    'django_admin_hstore_widget',
 
     'blog.apps.BlogConfig',
 

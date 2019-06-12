@@ -24,10 +24,38 @@
 
 {% include 'blog/layout/_nav.html' %}
 
+<style type="text/css">
+.experience2moi div{
+  filter:blur(3px)
+}
+
+.experience2moi div:hover{
+  filter:blur(0)
+}
+
+</style>
+
 {% block body %}
 <article>
-    <!--<h1 class="title">#{{post.id}} - {{post.title}}</h1>--!>
-    <!--<p class="content">{{post.body}}</p>--!>
+    {%for post in posts reversed%}
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<h1>{{post.title}}</h1>
+				<div class="col-md-4 experience2moi">
+					<div id="{{post.id}}">{{post.description_sub_neg|safe}}</div>
+				</div>
+				<div class="col-md-4">
+					<div id="{{post.id}}" >{{post.description_objective|safe}}</div>
+				</div>
+				<div class="col-md-4 experience2moi">
+					<div id="{{post.id}}">{{post.description_sub_pos|safe}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{%endfor%}
 <div class="section">
 		<div class="container">
 			<div class="row">
@@ -143,6 +171,19 @@
 		</div>
 	</div>
 </article>
+
+
+<script>
+function myFunction(x) {
+	if(document.getElementById(x).style.visibility == "hidden"){
+    document.getElementById(x).style.visibility = "visible"
+    }else{
+    document.getElementById(x).style.visibility = "hidden"
+    }
+}
+</script>
+
+
 
 <!--<p><a href="{% url 'blog:index' %}">revenir à l'index</a></p>--!>
 

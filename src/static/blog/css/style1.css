@@ -2288,3 +2288,11 @@ keyframes fa-spin { 0%{
     width: 100%;
     height: 100%;
 }
+
+/* Flou */
+.experience2moi div {
+	filter: blur(3px);
+}
+.experience2moi div:hover {
+	filter: blur(0);
+}

@@ -35,14 +35,17 @@
                 <div class="col-md-8">
                     <h1>{{post.title}}</h1>
                     <br>
-                    <h5>Domaine(s) utilisé(s): {{post.domain}}</h5>
-                    {% for domains in post.domain_list %}
-                    <footer>{{domains}}</footer>
+                    <h5>Domaine(s) utilisé(s):</h5>
+                    <blockquote>
+                    {%for domains in post.domain %}
+                        <footer>{{domains}}</footer>
+                    {%endfor%}
+                    </blockquote>
                     <p class="text-center">
-                        <br> <br> {{post.intro}}
+                        <br> <br> {{post.intro|safe}}
                     </p>
                   <button onclick="myFunction({{post.id}})">plus de detail</button>
-                    <div id="{{post.id}}" style="visibility:hidden">{{post.body}}</div>
+                    <div id="{{post.id}}" style="visibility:hidden">{{post.body|safe}}</div>
                 </div>
                 <div class="col-md-2">
                     {% if post.image1  %}
