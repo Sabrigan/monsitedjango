@@ -28,7 +28,7 @@
 
 {% block body %}
 <article>
-<div class="section">
+	<div class="section">
 		<div class="container">
 			<p class="text-center">Ci-dessous vous pouvez voir une
 				auto-évaluation des differents langages de programmation et autres
@@ -37,6 +37,15 @@
 			<div class="row">
 				<div class="col-md-4">
 					<ul>
+						{% for post in posts %}
+						<h1>{{post.title}}</h1>
+						{% for langage in post.langages%}
+						{% for utilisation in post.utilisations%}
+						<li><progress value="{{utilisation}}" max="100">{{utilisation}}%</progress>{{langage}}</li>
+						{%endfor%}
+						{%endfor%}
+						{%endfor%}
+						<li>test</li>
 						<li><progress value="70" max="100">70%</progress>Python</li>
 						<li><progress value="70" max="100">70%</progress>Apprentissage supervisé</li>
 						<li><progress value="70" max="100">70%</progress>kera</li>

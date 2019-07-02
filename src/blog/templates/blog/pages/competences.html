@@ -35,6 +35,12 @@
 					<p class="text-center">
 						Domaine de compétence : <br> <br>
 					<ul>
+					{% for post in posts%}
+						{% for competences in post.competence%}
+					<li>{{competences}}</li>
+						{%endfor%}
+					{%endfor%}
+<!--
 						<li>Management d'équipe (dans l'associatif et egalement une expérience comme SCRUM Master)</li>
 						<li>Datascience, Machine Learning et Intelligence Artificielle</li>
 						<li>Physique Fondamentale (Electromagnétisme, Mecanique)</li>
@@ -60,6 +66,7 @@
 						<li>Datasciences et Machine Learning:<br> Lors de ma
 							dernière mission au sein de Airbus, j'ai créé avec mon equipe un programme de detection d'UEBA (User Entity Behaviour Anomaly).
 						</li>
+-->
 					</ul>
 				</div>
 				<!--<div class="col-md-4">-->
@@ -71,8 +78,6 @@
 		</div>
 	</div>
 </article>
-
-<!--<p><a href="{% url 'blog:index' %}">revenir à l'index</a></p>--!>
 
 {% endblock %}
 {% endblock %}

@@ -37,16 +37,25 @@
 
 {% block body %}
 <article>
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4" align="center"><h6>version recruteur</h6></div>
+				<div class="col-md-4"></div>
+				<div class="col-md-4" align="center"><h6>version personnelle</h6></div>
+			</div>
+		</div>
+	</div>
     {%for post in posts reversed%}
 	<div class="section">
 		<div class="container">
 			<div class="row">
-				<h1>{{post.title}}</h1>
+				<div align="center"> <h1>{{post.title}}</h1></div>
 				<div class="col-md-4 experience2moi">
 					<div id="{{post.id}}">{{post.description_sub_neg|safe}}</div>
 				</div>
 				<div class="col-md-4">
-					<div id="{{post.id}}" >{{post.description_objective|safe}}</div>
+					<div id="{{post.id}}">{{post.description_objective|safe}}</div>
 				</div>
 				<div class="col-md-4 experience2moi">
 					<div id="{{post.id}}">{{post.description_sub_pos|safe}}</div>
@@ -56,6 +65,8 @@
 	</div>
 
 	{%endfor%}
+<!--
+&lt;!&ndash;
 <div class="section">
 		<div class="container">
 			<div class="row">
@@ -166,9 +177,11 @@
 							licence simuler de façon simplifiée les phenomènes
 							électromagnétique d'une étoile à neutron
 					</div>
+&ndash;&gt;
 				</div>
 			</div>
 		</div>
+-->
 	</div>
 </article>
 
