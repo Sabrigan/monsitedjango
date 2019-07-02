@@ -1,0 +1,7 @@
+#
+####### example-requirements.txt #######
+#
+###### Requirements without Version Specifiers ######
+django-extensions
+imagekit
+django-admin-hstore-widget
