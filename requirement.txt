@@ -4,4 +4,5 @@
 ###### Requirements without Version Specifiers ######
 django-extensions
 imagekit
+django-imagekit
 django-admin-hstore-widget

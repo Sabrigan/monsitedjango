@@ -60,3 +60,6 @@ class Post_Experience(TimstampModel):
     end_date = models.DateField(blank=True)
     langages =  ListCharField(base_field=models.CharField(max_length=25,blank=True, default=" "),size=5, max_length=(5 * 26))
     utilisations = ListCharField(base_field=models.IntegerField(blank=True, default=0),size=5, max_length=(5 * 26))
+
+    def __str__(self):
+        return self.title
